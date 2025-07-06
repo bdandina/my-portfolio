@@ -1,6 +1,9 @@
-/* ===== Umum ===== */
+/* ============================
+   GLOBAL STYLES
+============================ */
 body {
   background-color: #f4f4f4;
+  color: #000;
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
   padding: 40px;
@@ -8,40 +11,24 @@ body {
 }
 
 .container {
-  background-color: white;
+  background-color: #fff;
   padding: 30px;
   max-width: 600px;
   margin: auto;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  transition: background-color 0.3s;
-}
-
-h1 {
-  font-size: 2.2em;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.6;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .profil-img {
   width: 150px;
-  max-width: 100%;
-  height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
 }
 
-/* ===== Navigasi ===== */
+/* ============================
+   NAVIGATION
+============================ */
 nav {
   background-color: #222;
   padding: 12px 0;
@@ -65,40 +52,33 @@ nav a.active {
   color: yellow;
 }
 
-.dark nav {
-  background-color: #1e1e1e;
-}
-
-.dark nav a.active {
-  color: #ffeb3b;
-}
-
-/* ===== Tombol ===== */
+/* ============================
+   BUTTON
+============================ */
 button {
   padding: 10px 20px;
   margin-bottom: 20px;
   background-color: #000;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
   background-color: #003366;
 }
 
-.dark button {
-  background-color: #333;
-  color: #fff;
+button:focus,
+a:focus {
+  outline: 2px solid #00ccff;
+  outline-offset: 2px;
 }
 
-.dark button:hover {
-  background-color: #555;
-}
-
-/* ===== Link Umum ===== */
+/* ============================
+   LINK
+============================ */
 a {
   color: navy;
   text-decoration: none;
@@ -109,11 +89,9 @@ a:hover {
   text-decoration: underline;
 }
 
-.dark a {
-  color: #90caf9;
-}
-
-/* ===== Proyek ===== */
+/* ============================
+   PROJECT CARDS
+============================ */
 .project-list {
   display: flex;
   flex-wrap: wrap;
@@ -124,24 +102,21 @@ a:hover {
 
 .project-card {
   flex: 1 1 300px;
-  background-color: white;
+  background-color: #fff;
   color: #333;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
 }
 
-.dark .project-card {
-  background-color: #1e1e1e;
-  color: #f1f1f1;
-}
-
-/* ===== Form Kontak ===== */
+/* ============================
+   FORM (KONTAK)
+============================ */
 form {
   display: flex;
   flex-direction: column;
@@ -149,49 +124,18 @@ form {
   margin-top: 30px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
   font-size: 1em;
   border-radius: 8px;
   border: 1px solid #ccc;
-  transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-input:focus, textarea:focus {
-  border-color: #00ccff;
-}
-
-.dark input,
-.dark textarea {
-  background-color: #1e1e1e;
-  color: white;
-  border: 1px solid #555;
-}
-
-form button {
-  padding: 10px 20px;
-  background-color: #003366;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-form button:hover {
-  background-color: #005599;
-}
-
-.dark form button {
-  background-color: #444;
-  color: white;
-}
-
-.dark form button:hover {
-  background-color: #666;
-}
-
-/* ===== Footer ===== */
+/* ============================
+   FOOTER
+============================ */
 footer {
   margin-top: 40px;
   padding: 20px;
@@ -199,18 +143,72 @@ footer {
   color: #888;
 }
 
+/* ============================
+   DARK MODE
+============================ */
+.dark body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark .container {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark nav {
+  background-color: #1e1e1e;
+}
+
+.dark nav a {
+  color: #ffffff;
+}
+
+.dark nav a:hover {
+  color: #90caf9;
+}
+
+.dark nav a.active {
+  color: #ffd700;
+}
+
+.dark a {
+  color: #90caf9;
+}
+
+.dark button {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark button:hover {
+  background-color: #005588;
+}
+
+.dark .project-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark input,
+.dark textarea {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
 .dark footer {
   color: #ccc;
 }
 
-/* ===== Fokus & Aksesibilitas ===== */
-button:focus,
-a:focus {
-  outline: 2px solid #00ccff;
-  outline-offset: 2px;
+/* Tambahan transisi halus untuk semua elemen */
+.dark * {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-/* ===== Responsive Design ===== */
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
 @media (max-width: 768px) {
   .project-list {
     flex-direction: column;
@@ -233,11 +231,7 @@ a:focus {
     padding: 20px;
   }
 
-  .project-card,
-  input,
-  textarea,
-  button,
-  form button {
-    width: 100%;
+  .project-card {
+    width: 95%;
   }
 }
