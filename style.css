@@ -110,3 +110,14 @@ nav a {
 nav a:hover {
   color: #00ccff;
 }
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .project-card {
+    width: 95%;
+  }
+}
