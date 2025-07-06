@@ -7,14 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
     <nav>
   <a href="index.html">Beranda</a>
   <a href="projects.html">Proyek</a>
   <a href="contact.html" class="active">Kontak</a>
-</nav>
+  <button onclick="toggleDarkMode()">🌙 Ganti Mode</button>
+    </nav>
+  </header>
 
+  <main>
   <div class="container">
-    <button onclick="toggleDarkMode()">🌙 Ganti Mode</button>
 
     <img src="images/profil.jpg" alt="Foto Bayu" class="profil-img" />
 <h2>Hubungi Saya</h2>
@@ -24,6 +27,7 @@
   <textarea name="message" placeholder="Pesan" required></textarea>
   <button type="submit">Kirim</button>
 </form>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
