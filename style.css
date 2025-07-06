@@ -50,7 +50,7 @@ nav a.active {
 button {
   padding: 10px 20px;
   margin-bottom: 20px;
-  background-color: navy;
+  background-color: rgb(0, 0, 0);
   color: white;
   border: none;
   border-radius: 5px;
@@ -139,5 +139,9 @@ footer {
   .project-card {
     width: 95%;
   }
+}
+button:focus, a:focus {
+  outline: 2px solid #00ccff;
+  outline-offset: 2px;
 }
 
