@@ -1,9 +1,14 @@
 function toggleDarkMode() {
-  document.documentElement.classList.toggle('dark');
+  const isDark = document.documentElement.classList.toggle('dark');
+  localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
 
-  if (document.documentElement.classList.contains('dark')) {
-    localStorage.setItem('darkMode', 'enabled');
-  } else {
-    localStorage.setItem('darkMode', 'disabled');
-  }
+  const btn = document.querySelector('button');
+  btn.textContent = isDark ? '☀️ Mode Terang' : '🌙 Mode Gelap';
 }
+
+// Set teks tombol saat halaman dibuka
+window.addEventListener('DOMContentLoaded', () => {
+  const isDark = localStorage.getItem('darkMode') === 'enabled';
+  const btn = document.querySelector('button');
+  btn.textContent = isDark ? '☀️ Mode Terang' : '🌙 Mode Gelap';
+});
