@@ -144,4 +144,42 @@ button:focus, a:focus {
   outline: 2px solid #00ccff;
   outline-offset: 2px;
 }
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.project-card {
+  flex: 1 1 300px;
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* DARK MODE */
+.dark .project-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .project-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 95%;
+  }
+}
 
