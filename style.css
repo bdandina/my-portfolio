@@ -3,6 +3,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
   padding: 40px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -12,6 +13,7 @@ body {
   margin: auto;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
 }
 
 .profil-img {
@@ -27,4 +29,28 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+button {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: navy;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark .container {
+  background-color: #2c2c2c;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
