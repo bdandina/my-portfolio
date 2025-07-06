@@ -1,4 +1,4 @@
-/* Umum */
+/* ===== Umum ===== */
 body {
   background-color: #f4f4f4;
   font-family: 'Segoe UI', sans-serif;
@@ -17,13 +17,31 @@ body {
   transition: background-color 0.3s;
 }
 
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
 .profil-img {
   width: 150px;
+  max-width: 100%;
+  height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
 }
 
-/* Navigasi */
+/* ===== Navigasi ===== */
 nav {
   background-color: #222;
   padding: 12px 0;
@@ -36,6 +54,7 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
+  transition: color 0.3s;
 }
 
 nav a:hover {
@@ -46,11 +65,19 @@ nav a.active {
   color: yellow;
 }
 
-/* Tombol */
+.dark nav {
+  background-color: #1e1e1e;
+}
+
+.dark nav a.active {
+  color: #ffeb3b;
+}
+
+/* ===== Tombol ===== */
 button {
   padding: 10px 20px;
   margin-bottom: 20px;
-  background-color: rgb(0, 0, 0);
+  background-color: #000;
   color: white;
   border: none;
   border-radius: 5px;
@@ -62,88 +89,31 @@ button:hover {
   background-color: #003366;
 }
 
-/* Link */
+.dark button {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark button:hover {
+  background-color: #555;
+}
+
+/* ===== Link Umum ===== */
 a {
   color: navy;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Kartu Proyek */
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.project-card {
-  flex: 1 1 300px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  margin-top: 40px;
-  padding: 20px;
-  font-size: 14px;
-  color: #888;
-}
-
-/* Dark Mode */
-.dark body {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-.dark .container {
-  background-color: #1e1e1e;
-}
-
 .dark a {
   color: #90caf9;
 }
 
-.dark nav {
-  background-color: #1e1e1e;
-}
-
-.dark footer {
-  color: #ccc;
-}
-.dark button {
-  background-color: #333;
-  color: #fff;
-}
-/* Responsive */
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .container {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .project-card {
-    width: 95%;
-  }
-}
-button:focus, a:focus {
-  outline: 2px solid #00ccff;
-  outline-offset: 2px;
-}
+/* ===== Proyek ===== */
 .project-list {
   display: flex;
   flex-wrap: wrap;
@@ -166,12 +136,81 @@ button:focus, a:focus {
   transform: translateY(-5px);
 }
 
-/* DARK MODE */
 .dark .project-card {
   background-color: #1e1e1e;
   color: #f1f1f1;
 }
 
+/* ===== Form Kontak ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #00ccff;
+}
+
+.dark input,
+.dark textarea {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #555;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #005599;
+}
+
+.dark form button {
+  background-color: #444;
+  color: white;
+}
+
+.dark form button:hover {
+  background-color: #666;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.dark footer {
+  color: #ccc;
+}
+
+/* ===== Fokus & Aksesibilitas ===== */
+button:focus,
+a:focus {
+  outline: 2px solid #00ccff;
+  outline-offset: 2px;
+}
+
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .project-list {
     flex-direction: column;
@@ -183,3 +222,22 @@ button:focus, a:focus {
   }
 }
 
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .project-card,
+  input,
+  textarea,
+  button,
+  form button {
+    width: 100%;
+  }
+}

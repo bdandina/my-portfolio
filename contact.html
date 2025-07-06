@@ -3,39 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    document.documentElement.classList.add('dark');
-  }
-</script>
-  <title>kontak</title>
+  <title>Kontak | Bayu</title>
   <link rel="stylesheet" href="style.css" />
-
-
+  <script>
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
 </head>
 <body>
   <header>
     <nav>
-  <a href="index.html">Beranda</a>
-  <a href="projects.html">Proyek</a>
-  <a href="contact.html" class="active">Kontak</a>
-  <button onclick="toggleDarkMode()">🌙 Ganti Mode</button>
+      <a href="index.html">Beranda</a>
+      <a href="projects.html">Proyek</a>
+      <a href="contact.html" class="active">Kontak</a>
+      <button onclick="toggleDarkMode()">🌙 Ganti Mode</button>
     </nav>
   </header>
 
   <main>
-  <div class="container">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <div class="container">
+      <h1>Kontak Saya</h1>
+      <p>Silakan kirimkan pesan jika ada pertanyaan atau kolaborasi.</p>
 
-    <img src="images/profil.jpg" alt="Foto Bayu" class="profil-img" />
-<h2>Hubungi Saya</h2>
-<form action="https://formspree.io/f/xxxxyyyy" method="POST">
-  <input type="text" name="name" placeholder="Nama Anda" required />
-  <input type="email" name="email" placeholder="Email Anda" required />
-  <textarea name="message" placeholder="Pesan" required></textarea>
-  <button type="submit">Kirim</button>
-</form>
+       <form action="https://formspree.io/f/mpwreoyz" method="POST">
+    <input type="text" name="name" placeholder="Nama Anda" required>
+    <input type="email" name="email" placeholder="Email Anda" required>
+    <textarea name="message" placeholder="Pesan Anda" rows="6" required></textarea>
+    <button type="submit">Kirim Pesan</button>
+  </form>
+    </div>
   </main>
+
+  <footer>
+    <p>© 2025 Bayu Dwi Andina</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
