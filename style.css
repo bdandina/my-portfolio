@@ -93,3 +93,20 @@ nav a.active {
 .project-card:hover {
   transform: scale(1.05);
 }
+nav {
+  background-color: #222;
+  padding: 12px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #00ccff;
+}
