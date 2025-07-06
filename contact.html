@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kontak</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+  <a href="index.html">Beranda</a>
+  <a href="projects.html">Proyek</a>
+  <a href="contact.html">Kontak</a>
+</nav>
+
+  <div class="container">
+    <button onclick="toggleDarkMode()">🌙 Ganti Mode</button>
+
+    <img src="images/profil.jpg" alt="Foto Bayu" class="profil-img" />
+<h2>Hubungi Saya</h2>
+<form action="https://formspree.io/f/xxxxyyyy" method="POST">
+  <input type="text" name="name" placeholder="Nama Anda" required />
+  <input type="email" name="email" placeholder="Email Anda" required />
+  <textarea name="message" placeholder="Pesan" required></textarea>
+  <button type="submit">Kirim</button>
+</form>
+  <script src="script.js"></script>
+</body>
+</html>
